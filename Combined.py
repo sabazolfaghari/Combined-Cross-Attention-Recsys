@@ -215,8 +215,8 @@ def main():
     start_time_readable = datetime.fromtimestamp(start_time).strftime('%Y-%m-%d %H:%M:%S')
     print(f"Execution started at: {start_time_readable}")
 
-    aligned_train_file = 'C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Final Combined Code and Files//FINAL//Saved Files//aligned_train3.json'
-    aligned_test_file = 'C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Final Combined Code and Files//FINAL//Saved Files//aligned_test3.json'
+    aligned_train_file = '//aligned_train.json'
+    aligned_test_file = '//aligned_test.json'
 
     if os.path.exists(aligned_train_file) and os.path.exists(aligned_test_file):
         print(f"Aligned train and test data found. Loading from files.")
@@ -226,12 +226,12 @@ def main():
         print("Aligned files not found. Creating train and test alignment...")
 
         # Load train and test embeddings
-        similarity_train = load_from_json("C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Movie Similarity Code and Files//FINAL//Saved Files//train_embeddings.json")
-        similarity_test = load_from_json("C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Movie Similarity Code and Files//FINAL//Saved Files//test_embeddings.json")
-        temporal_train = load_from_json("C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Temporal Code and Files//FINAL//Saved Files//train_embeddings.json")
-        temporal_test = load_from_json("C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Temporal Code and Files//FINAL//Saved Files//test_embeddings.json")
-        actual_ratings_train = load_from_json("C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Final Combined Code and Files//FINAL//Saved Files//actual_ratings_train.json")
-        actual_ratings_test = load_from_json("C://Users//Saba//Documents//UNIVERSITY//Thesis//Thesis//Final Combined Code and Files//FINAL//Saved Files//actual_ratings_test.json")
+        similarity_train = load_from_json("//similarity//train_embeddings.json")
+        similarity_test = load_from_json("//similarity//test_embeddings.json")
+        temporal_train = load_from_json("//temporal//train_embeddings.json")
+        temporal_test = load_from_json("//temporal//test_embeddings.json")
+        actual_ratings_train = load_from_json("//actual_ratings_train.json")
+        actual_ratings_test = load_from_json("//actual_ratings_test.json")
         
         # Align data
         train_data = align_embeddings(similarity_train, temporal_train, actual_ratings_train)
@@ -290,4 +290,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
