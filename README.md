@@ -19,4 +19,4 @@ Install dependencies with pip install.
 
 ## Usage
 ```bash
-python -u "combined.py"
+python -u "Combined.py"
