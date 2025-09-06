@@ -20,3 +20,15 @@ Install dependencies with pip install.
 ## Usage
 ```bash
 python -u "Combined.py"
+```
+
+## Sample Output
+```bash
+RMSE: 0.8404
+MAE: 0.5539
+Precision@10: 0.9852
+Recall@10: 0.2332
+NDCG@10: 0.9896
+Hit Rate@10: 1.0000
+Coverage: 0.0693
+```
